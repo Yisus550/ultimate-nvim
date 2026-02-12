@@ -198,4 +198,4 @@ This configuration is based on the excellent work of **[Jiedong Hao (jdhao)](htt
 
 This configuration maintains the original **MIT License** from the base project.
 
-Special thanks to jdhao for creating and maintaining such a comprehensive and well-documented Neovim configuration that serves as an excellent foundation for customization.
+> Special thanks to **jdhao** for creating and maintaining such a comprehensive and well-documented Neovim configuration that serves as an excellent foundation for customization.
