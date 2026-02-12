@@ -40,97 +40,79 @@ This configuration includes several enhancements and modifications from the orig
 
 ## Added Plugins
 
-+ **AI Code Assistance**: [copilot.lua](https://github.com/zbirenbaum/copilot.lua) and [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim) for GitHub Copilot integration
-+ **Code Context**: [dropbar.nvim](https://github.com/Bekaboo/dropbar.nvim) for winbar breadcrumbs showing code context
-+ **Color Highlighting**: [nvim-colorizer.lua](https://github.com/catgoose/nvim-colorizer.lua) for hex/RGB color preview
-+ **Enhanced Quickfix**: [quicker.nvim](https://github.com/stevearc/quicker.nvim) for improved quickfix window functionality
-+ **Colorscheme**: [e-ink.nvim](https://github.com/e-ink-colorscheme/e-ink.nvim) colorscheme option
+- **AI Code Assistance**: [copilot.lua](https://github.com/zbirenbaum/copilot.lua) and [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim) for GitHub Copilot integration
+- **Code Context**: [dropbar.nvim](https://github.com/Bekaboo/dropbar.nvim) for winbar breadcrumbs showing code context
+- **Color Highlighting**: [nvim-colorizer.lua](https://github.com/catgoose/nvim-colorizer.lua) for hex/RGB color preview
+- **Enhanced Quickfix**: [quicker.nvim](https://github.com/stevearc/quicker.nvim) for improved quickfix window functionality
+- **Colorscheme**: [e-ink.nvim](https://github.com/e-ink-colorscheme/e-ink.nvim) colorscheme option
 
 ## Removed Plugins
 
-+ **repmo-vim**: Repeat motion plugin removed
-+ **snacks.nvim**: Partial dashboard configuration simplified
+- **repmo-vim**: Repeat motion plugin removed
+- **snacks.nvim**: Partial dashboard configuration simplified
 
 ## Modified Configurations
 
-+ **nvim-treesitter**: Changed from lazy-loaded (`lazy = true`) to eager loading (`lazy = false`) for immediate syntax highlighting
-+ **treesitter-textobjects**: Now enabled (was previously commented out in original)
-+ **nvim-ufo**: Fold column changed from `"1"` to `"0"` for cleaner appearance
+- **nvim-treesitter**: Changed from lazy-loaded (`lazy = true`) to eager loading (`lazy = false`) for immediate syntax highlighting
+- **treesitter-textobjects**: Now enabled (was previously commented out in original)
+- **nvim-ufo**: Fold column changed from `"1"` to `"0"` for cleaner appearance
 
 ## New LSP Server Configurations
 
-+ **vtsls.lua**: Dedicated configuration for TypeScript/JavaScript LSP server
-+ **ruby_lsp.lua**: Dedicated configuration for Ruby language server
+- **vtsls.lua**: Dedicated configuration for TypeScript/JavaScript LSP server
+- **ruby_lsp.lua**: Dedicated configuration for Ruby language server
 
 ## Keymap Changes
 
-+ **System Clipboard Integration**: `p` and `P` remapped to always paste from system clipboard (`"+p` and `"+P`)
-+ **Window Navigation**: Added arrow key bindings (`<Left>`, `<Right>`, `<Up>`, `<Down>`) for window navigation
-+ **Buffer Navigation**: Removed `<S-h>` and `<S-l>` mappings for previous/next buffer
+- **System Clipboard Integration**: `p` and `P` remapped to always paste from system clipboard (`"+p` and `"+P`)
+- **Window Navigation**: Added arrow key bindings (`<Left>`, `<Right>`, `<Up>`, `<Down>`) for window navigation
+- **Buffer Navigation**: Removed `<S-h>` and `<S-l>` mappings for previous/next buffer
 
 # Install and setup
 
 See [doc here](docs/README.md) on how to install Nvim's dependencies, Nvim itself,
 and how to set up on different platforms (Linux, macOS, and Windows).
 
-# Features #
+# Features
 
-+ AI code assistance and chat interface via [copilot.lua](https://github.com/zbirenbaum/copilot.lua) and [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim).
-+ Code context breadcrumbs via [dropbar.nvim](https://github.com/Bekaboo/dropbar.nvim).
-+ Hex/RGB color highlighting via [nvim-colorizer.lua](https://github.com/catgoose/nvim-colorizer.lua).
-+ Enhanced quickfix window via [quicker.nvim](https://github.com/stevearc/quicker.nvim).
-+ Plugin management via [Lazy.nvim](https://github.com/folke/lazy.nvim).
-+ Code, snippet, word auto-completion via [nvim-cmp](https://github.com/hrsh7th/nvim-cmp).
-+ Language server protocol (LSP) support via [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig).
-+ Git integration via [vim-fugitive](https://github.com/tpope/vim-fugitive).
-+ Better escaping from insert mode via [better-escape.vim](https://github.com/nvim-zh/better-escape.vim).
-+ Ultra-fast project-wide fuzzy searching via [fzf-lua](https://github.com/ibhagwan/fzf-lua).
-+ Faster code commenting via [vim-commentary](https://github.com/tpope/vim-commentary).
-+ Faster matching pair insertion and jump via [nvim-autopairs](https://github.com/windwp/nvim-autopairs).
-+ Smarter and faster matching pair management (add, replace or delete) via [vim-sandwich](https://github.com/machakann/vim-sandwich).
-+ Fast buffer jump via [hop.nvim](https://github.com/phaazon/hop.nvim).
-+ Powerful snippet insertion via [Ultisnips](https://github.com/SirVer/ultisnips).
-+ Beautiful statusline via [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim).
-+ File tree explorer via [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua).
-+ Better quickfix list with [nvim-bqf](https://github.com/kevinhwang91/nvim-bqf).
-+ Show search index and count with [nvim-hlslens](https://github.com/kevinhwang91/nvim-hlslens).
-+ User-defined mapping hint via [which-key.nvim](https://github.com/folke/which-key.nvim).
-+ Asynchronous code execution via [asyncrun.vim](https://github.com/skywind3000/asyncrun.vim).
-+ Code highlighting via [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
-+ Code editing using true nvim inside browser via [firenvim](https://github.com/glacambre/firenvim).
-+ Beautiful colorscheme via [sainnhe/gruvbox-material](https://github.com/sainnhe/gruvbox-material) and other colorschemes.
-+ Markdown previewing via [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
-+ LaTeX editing and previewing via [vimtex](https://github.com/lervag/vimtex)
-+ Animated GUI style notification via [nvim-notify](https://github.com/rcarriga/nvim-notify).
-+ Tags navigation via [vista](https://github.com/liuchengxu/vista.vim).
-+ Undo management via [vim-mundo](https://github.com/simnalamburt/vim-mundo)
-+ Code folding with [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) and [statuscol.nvim](https://github.com/luukvbaal/statuscol.nvim)
-+ ......
-
-# UI Demo
-
-## Start screen with dashboard-nvim
-
-## File fuzzy finding using fzf-lua
-
-## Code autocompletion with nvim-cmp
-
-## Git add, commit and push via fugitive.vim
-
-## Tags
-
-## Cursor jump via hop.nvim
-
-## GUI-style notification with nvim-notify
-
-## Code folding with nvim-ufo and statuscol.nvim
+- AI code assistance and chat interface via [copilot.lua](https://github.com/zbirenbaum/copilot.lua) and [CopilotChat.nvim](https://github.com/CopilotC-Nvim/CopilotChat.nvim).
+- Code context breadcrumbs via [dropbar.nvim](https://github.com/Bekaboo/dropbar.nvim).
+- Hex/RGB color highlighting via [nvim-colorizer.lua](https://github.com/catgoose/nvim-colorizer.lua).
+- Enhanced quickfix window via [quicker.nvim](https://github.com/stevearc/quicker.nvim).
+- Plugin management via [Lazy.nvim](https://github.com/folke/lazy.nvim).
+- Code, snippet, word auto-completion via [nvim-cmp](https://github.com/hrsh7th/nvim-cmp).
+- Language server protocol (LSP) support via [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig).
+- Git integration via [vim-fugitive](https://github.com/tpope/vim-fugitive).
+- Better escaping from insert mode via [better-escape.vim](https://github.com/nvim-zh/better-escape.vim).
+- Ultra-fast project-wide fuzzy searching via [fzf-lua](https://github.com/ibhagwan/fzf-lua).
+- Faster code commenting via [vim-commentary](https://github.com/tpope/vim-commentary).
+- Faster matching pair insertion and jump via [nvim-autopairs](https://github.com/windwp/nvim-autopairs).
+- Smarter and faster matching pair management (add, replace or delete) via [vim-sandwich](https://github.com/machakann/vim-sandwich).
+- Fast buffer jump via [hop.nvim](https://github.com/phaazon/hop.nvim).
+- Powerful snippet insertion via [Ultisnips](https://github.com/SirVer/ultisnips).
+- Beautiful statusline via [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim).
+- File tree explorer via [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua).
+- Better quickfix list with [nvim-bqf](https://github.com/kevinhwang91/nvim-bqf).
+- Show search index and count with [nvim-hlslens](https://github.com/kevinhwang91/nvim-hlslens).
+- User-defined mapping hint via [which-key.nvim](https://github.com/folke/which-key.nvim).
+- Asynchronous code execution via [asyncrun.vim](https://github.com/skywind3000/asyncrun.vim).
+- Code highlighting via [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter).
+- Code editing using true nvim inside browser via [firenvim](https://github.com/glacambre/firenvim).
+- Beautiful colorscheme via [sainnhe/gruvbox-material](https://github.com/sainnhe/gruvbox-material) and other colorschemes.
+- Markdown previewing via [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
+- LaTeX editing and previewing via [vimtex](https://github.com/lervag/vimtex)
+- Animated GUI style notification via [nvim-notify](https://github.com/rcarriga/nvim-notify).
+- Tags navigation via [vista](https://github.com/liuchengxu/vista.vim).
+- Undo management via [vim-mundo](https://github.com/simnalamburt/vim-mundo)
+- Code folding with [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) and [statuscol.nvim](https://github.com/luukvbaal/statuscol.nvim)
+- ......
 
 # Shortcuts
 
 Some of the shortcuts I use frequently are listed here. In the following shortcuts, `<leader>` represents ASCII character `,`.
 
 | Shortcut          | Mode          | platform        | Description                                                              |
-|-------------------|---------------|-----------------|--------------------------------------------------------------------------|
+| ----------------- | ------------- | --------------- | ------------------------------------------------------------------------ |
 | `<leader>ff`      | Normal        | Linux/macOS/Win | Fuzzy file searching in a floating window                                |
 | `<leader>fh`      | Normal        | Linux/macOS/Win | Fuzzy help file grepping in a floating window                            |
 | `<leader>fg`      | Normal        | Linux/macOS/Win | Fuzzy project-wide grepping in a floating window                         |
@@ -175,7 +157,7 @@ Some of the shortcuts I use frequently are listed here. In the following shortcu
 In addition to commands provided by various plugins, I have also created some custom commands for personal use.
 
 | command      | description                                                             | example                        |
-|--------------|-------------------------------------------------------------------------|--------------------------------|
+| ------------ | ----------------------------------------------------------------------- | ------------------------------ |
 | `Redir`      | capture command output to a tabpage for easier inspection.              | `Redir hi`                     |
 | `Edit`       | edit multiple files at the same time, supports globing                  | `Edit *.vim`                   |
 | `Datetime`   | print current date and time or convert Unix time stamp to date and time | `Datetime 12345` or `Datetime` |
@@ -192,9 +174,9 @@ If you encounter problems, use the `:checkhealth` command in Neovim to troublesh
 
 This configuration is based on the excellent work of **[Jiedong Hao (jdhao)](https://github.com/jdhao)**.
 
-+ **Original Repository**: [jdhao/nvim-config](https://github.com/jdhao/nvim-config)
-+ **Author's Blog**: [https://jdhao.github.io/](https://jdhao.github.io/)
-+ **Neovim Resources**: See [docs/nvim_resources.md](docs/nvim_resources.md) for helpful Neovim learning materials
+- **Original Repository**: [jdhao/nvim-config](https://github.com/jdhao/nvim-config)
+- **Author's Blog**: [https://jdhao.github.io/](https://jdhao.github.io/)
+- **Neovim Resources**: See [docs/nvim_resources.md](docs/nvim_resources.md) for helpful Neovim learning materials
 
 This configuration maintains the original **MIT License** from the base project.
 
