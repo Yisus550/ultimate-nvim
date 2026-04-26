@@ -283,6 +283,16 @@ local plugin_specs = {
     end,
   },
 
+  {
+    "folke/noice.nvim",
+    event = "VeryLazy",
+    opts = {},
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+      "rcarriga/nvim-notify",
+    },
+  },
+
   { "nvim-lua/plenary.nvim", lazy = true },
 
   -- For Windows and Mac, we can open an URL in the browser. For Linux, it may
