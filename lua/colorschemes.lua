@@ -39,6 +39,7 @@ M.colorscheme_conf = {
     use_theme("gruvbox-material")
   end,
   everforest = function()
+    vim.o.background = "dark"
     vim.g.everforest_background = "hard"
     vim.g.everforest_enable_italic = 1
     vim.g.everforest_better_performance = 1
@@ -96,10 +97,10 @@ M.colorscheme_conf = {
   end,
 }
 
---- Use a fixed blue colorscheme (nightfox)
+--- Use a fixed colorscheme on startup.
 M.rand_colorscheme = function()
-  -- Always use nightfox (blue theme)
-  M.colorscheme_conf.nightfox()
+  -- Always use everforest (dark theme)
+  M.colorscheme_conf.everforest()
 end
 
 return M
