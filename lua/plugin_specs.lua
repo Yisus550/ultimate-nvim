@@ -453,6 +453,22 @@ local plugin_specs = {
       require("config.git-linker")
     end,
   },
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = {
+      "LazyGit",
+      "LazyGitConfig",
+      "LazyGitCurrentFile",
+      "LazyGitFilter",
+      "LazyGitFilterCurrentFile",
+    },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = function()
+      require("config.lazygit")
+    end,
+  },
 
   -- Show git change (change, delete, add) signs in vim sign column
   {
@@ -781,7 +797,7 @@ local plugin_specs = {
   },
   {
     "zbirenbaum/copilot.lua",
-    cmd = "Copilot",
+    lazy = false,
     config = function()
       require("copilot").setup {
         suggestion = {
