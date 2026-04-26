@@ -759,10 +759,17 @@ local plugin_specs = {
 
   -- file explorer
   {
-    "nvim-tree/nvim-tree.lua",
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
     keys = { "<space>s" },
+    cmd = { "Neotree" },
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
     config = function()
-      require("config.nvim-tree")
+      require("config.neo-tree")
     end,
   },
 

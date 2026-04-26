@@ -89,7 +89,7 @@ api.nvim_create_autocmd("VimResized", {
   command = "wincmd =",
 })
 
-local function open_nvim_tree(data)
+local function open_file_explorer(data)
   -- check if buffer is a directory
   local directory = vim.fn.isdirectory(data.file) == 1
 
@@ -103,11 +103,12 @@ local function open_nvim_tree(data)
   -- wipe the directory buffer
   vim.cmd.bw(data.buf)
 
-  -- open the tree
-  require("nvim-tree.api").tree.open()
+  -- open neo-tree rooted at the entered directory
+  local dir = fn.fnameescape(data.file)
+  vim.cmd("Neotree position=left dir=" .. dir)
 end
 
-api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+api.nvim_create_autocmd({ "VimEnter" }, { callback = open_file_explorer })
 
 -- Do not use smart case in command line mode, extracted from https://vi.stackexchange.com/a/16511/15292.
 api.nvim_create_augroup("dynamic_smartcase", { clear = true })
@@ -196,7 +197,7 @@ api.nvim_create_autocmd("BufEnter", {
   desc = "Quit Nvim if we have only one window, and its filetype match our pattern",
   ---@diagnostic disable-next-line: unused-local
   callback = function(context)
-    local quit_filetypes = { "qf", "vista", "NvimTree" }
+    local quit_filetypes = { "qf", "vista", "NvimTree", "neo-tree", "neo-tree-popup" }
 
     local should_quit = true
     local tabwins = api.nvim_tabpage_list_wins(0)
