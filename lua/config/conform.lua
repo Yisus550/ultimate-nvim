@@ -7,7 +7,9 @@ conform.setup({
     javascriptreact = { "prettier" },
     typescriptreact = { "prettier" },
     css = { "prettier" },
-    html = { "prettier" },
+    html = { "djlint" },
+    django = { "djlint" },
+    jinja = { "djlint" },
     json = { "prettier" },
     yaml = { "prettier" },
     markdown = { "prettier" },
@@ -15,6 +17,13 @@ conform.setup({
     lua = { "stylua" },
     python = { "isort", "black" },
     -- ruby = { "rubocop" }, -- Requires Ruby gem: gem install rubocop
+  },
+  formatters = {
+    djlint = {
+      command = "djlint",
+      args = { "--reformat", "-" },
+      stdin = true,
+    },
   },
   -- Format on save
   format_on_save = {
@@ -29,6 +38,16 @@ vim.keymap.set({ "n", "v" }, "<leader>mf", function()
   conform.format({
     lsp_fallback = true,
     async = false,
-    timeout_ms = 300,
+    timeout_ms = 1000,
   })
+  vim.notify("Formatting with Conform", vim.log.levels.INFO)
 end, { desc = "Format file or range (in visual mode)" })
+
+-- Add command for manual formatting
+vim.api.nvim_create_user_command("ConformFormat", function()
+  conform.format({
+    lsp_fallback = true,
+    async = false,
+    timeout_ms = 1000,
+  })
+end, {})
